@@ -1,0 +1,157 @@
+    *{
+        margin:0px;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, sans-serif;
+    }
+    h1{
+        font-size:60px;
+    }
+    h2{
+        font-size:40px;
+    }
+    h3{
+        font-size:35px;
+    }
+    h4,h5,h6{
+        font-size:20px;
+    }
+    p{
+        font-size:16px;
+    }
+    h1,h2,h3,h4,h5,h6,p,a,li{
+        margin-bottom: 0.7em;
+    }
+    .h-pri {
+        font-size: 3rem;
+        padding: 12px;
+        color: #3E3E3E;
+    }
+    .center {
+        text-align: center;
+        color: #3E3E3E;
+    }
+    
+    main{
+        margin-top:60px;
+    }
+    main section:nth-child(even){
+        background-color: #f7f7f7;
+    }
+    .text-white{
+        color:white;
+      }
+    
+    header{
+        position: fixed;  
+        top:0;
+        left:0;
+        right:0;
+        height:60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        z-index: 1; 
+        max-width: 100%; 
+        text-decoration: none;
+    }
+    header a:hover {
+      color: #000;
+      }
+    .main-menu li{
+        display:inline;
+        margin-left: 20px;
+    }
+    .main-menu li a{
+        text-decoration: none;
+        color:black;
+    }
+    .main-menu li:hover a{
+    text-decoration: underline;
+    }
+    .hamburger{
+        display: none;
+    }
+    
+    
+    .container{
+        padding:3% 10% 3% 10%;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 50%; 
+        padding: 0 15px; 
+        box-sizing: border-box;
+    }
+    
+    
+    .col-md-12 {
+        flex: 0 0 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    @media screen and (max-width: 767px) {
+        h1 {
+            font-size: 30px;
+        }
+    
+        h2 {
+            font-size: 25px;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        main{
+        margin-top:0px;
+        }
+        h1{
+        font-size:40px;
+        }
+        h2{
+        font-size:30px;
+        }
+        .main-menu{
+        display: none;
+        }
+        .hamburger {
+        display: inline;
+        }
+        .main-header{
+        position:relative;
+        top:0px;
+        }
+    
+    
+        .main-menu{
+        display: none;
+        }
+        .hamburger {
+        display: inline;
+        }
+        .main-header{
+        position:relative;
+        top:0px;
+        }
+        .main-menu.responsive {
+        display: block;
+        position: absolute;
+        background-color: #f7f7f7;
+        width:100%;
+        top:60px;
+        left:0px;
+        padding-top:20px;
+        padding-bottom:20px;
+        }
+        .main-menu.responsive li{
+        display: block;
+        margin-left:0px;
+        }  
+        
+    }
+    
+    .section-thankyou {
+        text-align: center;
+        margin-top: 200px;
+    }

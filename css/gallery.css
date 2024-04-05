@@ -1,0 +1,64 @@
+/*gallery*/
+.imggalr {
+    margin-left: 150px;
+    margin-top: 150px;
+    width: 80%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: "1fr 1fr 1fr 1fr 1fr" 33.33vh
+        "1fr 1fr 1fr 1fr 1fr" 33.33vh
+}
+
+.imggalr .box {
+    position: relative;
+    margin: 5px;
+}
+
+.imggalr .box.a {
+    grid-row: span 2;
+}
+
+.imggalr .box.b,
+.imggalr .box.f,
+.imggalr .box.j,
+.imggalr .box.i {
+    grid-column: span 2;
+}
+
+.imggalr .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: -9px 9px 18px #e6e6e6, 9px -9px 18px #fff;
+}
+
+.gallery h1 {
+    background: #ffffff;
+    color: #3E3E3E;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    font-size: 35px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    transform: translateX(-20px);
+}
+@media screen and (max-width: 1200px) {
+    .imggalr {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .imggalr {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imggalr {
+        margin-left: 0;
+        width: 100%;
+    }
+}
