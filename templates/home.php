@@ -3,7 +3,7 @@
     
 ?>
     <?php
-          $headings = array('Prvý nadpis', 'Druhý nadpis');
+          $headings = array();
           $img_folder = '../assets/img/carousel/';
           generate_slides($headings, $img_folder);
         ?>
