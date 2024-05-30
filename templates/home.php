@@ -2,22 +2,11 @@
     include_once('partials/header.php');
     
 ?>
-    <section class="slider-container">
-        <div class="slider">
-            <div class="slide">
-              <img src="img/1.jpg" alt="Slide 1">
-            </div>
-            <div class="slide">
-              <img src="img/2.jpg" alt="Slide 2">
-            </div>
-            <div class="slide">
-              <img src="img/3.jpg" alt="Slide 3">
-            </div>
-            <a class="prev" id="prev">&#10094;</a>
-            <a class="next" id="next">&#10095;</a>
-          </div>
-          
-    </section>
+    <?php
+          $headings = array('Prvý nadpis', 'Druhý nadpis');
+          $img_folder = '../assets/img/carousel/';
+          generate_slides($headings, $img_folder);
+        ?>
     
     <main>
         <section class="container">
