@@ -1,17 +1,18 @@
-<?php
-    require_once('inc/function.php'); 
-?>
 <footer class="footer">
         <div class="container-footer">
             <div class="row">
                 <div class="footer-col">
                     <h4>company</h4>
-                    <ul>
-                        <li><a href="index.php">home</a></li>
-                        <li><a href="about.php">about us</a></li>
-                        <li><a href="contact.php">contact us</a></li>
-                        <li><a href="question.php">question</a></li>
-                    </ul>
+                    <?php
+                        $pages = array('Home'=>'home.php',
+                        'About us'=>'about.php',
+                        'Contact us'=>'contact.php',
+                        'Question'=>'question.php'  
+                        );
+                        //echo(generate_menu($pages));
+                        $menu_object = new Menu($pages);
+                        echo($menu_object->generate_menu());
+                    ?>
                 </div>
                 <div class="footer-col">
                     <h4>get help</h4>
@@ -39,7 +40,9 @@
 
     </footer>
     <?php
-        add_scripts();
+       $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+       $page_object = new Page($page_name);
+       $page_object->add_scripts();
     ?>
 </body>
 </html>

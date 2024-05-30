@@ -1,5 +1,5 @@
 <?php
-    require_once('inc/function.php');
+ require_once('../_inc/functions.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,29 +7,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsenal Football Club</title>
+    <title><?php 'Arsenal Football Club | '. (basename($_SERVER["SCRIPT_NAME"], '.php'));?></title>
     <?php
-        add_stylesheet();
+       //add_stylesheet();
+      $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+      $page_object = new Page($page_name);
+      $page_object->add_stylesheet();
     ?>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
     <header class="container main-header">
         <div>
-          <a href="index.html">
-            <img src="img/logo.png" height="40" alt="Arsenal FC">
+          <a href="home.php">
+            <img src="../assets/img/logo.png" height="40" alt="Arsenal FC">
           </a>
         </div>
         <nav class="main-nav">
           <ul class="main-menu" id="main-menu">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="about.php">About us</a></li>
-              <li><a href="question.php">Question</a></li>
-              <li><a href="contact.php">Contact</a></li>
+          <?php
+            $pages = array('Home'=>'home.php',
+            'About us'=>'about.php',
+            'Contact '=>'contact.php',
+            'Question'=>'question.php'  
+                );
+            //echo(generate_menu($pages));
+            $menu_object = new Menu($pages);
+            echo($menu_object->generate_menu());
+            ?>
           </ul>
           <a class="hamburger" id="hamburger">
               <i class="fa fa-bars"></i>
