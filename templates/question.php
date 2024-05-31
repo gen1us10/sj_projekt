@@ -2,11 +2,7 @@
     include_once('partials/header.php');
 ?>
     <main>
-        <section class="back">
-        <div class="container text-white">
-            <h1 class="text-white">Our history</h1>
-        </div>
-    </section>
+    <?php include('partials/banner.php');?>
     <section class="blog">
         
     
