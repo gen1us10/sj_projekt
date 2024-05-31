@@ -110,6 +110,26 @@ function generate_menu(array $pages): string{
     <a id="next" class="next">❯</a>
     </section>');
 }
+function generate_about(int $n_rows, int $n_cols){
+    $n_about = 1; // Počiatočná hodnota pre poradové číslo portfólia
+    $col_class = 100/$n_cols; // Výpočet šírky stĺpca na základe počtu stĺpcov
+
+    // Prechádza cez každý riadok v mriežke portfólia
+    for($i = 0; $i < $n_rows; $i++){
+        echo('<div class="row">'); // Začiatok riadku
+
+        // Pre každý stĺpec v aktuálnom riadku
+        for($j = 0; $j < $n_cols; $j++){
+            // Vytvára HTML element pre portfóliovú položku s identifikátorom a textom
+            echo('<div class="col-'.$col_class.' imggalr text-white text-center" id="about-'.$n_about.'">');
+            echo('Web stránka '.$n_about); // Text portfóliovej položky
+            $n_about++; // Inkrementuje poradové číslo portfólia
+            echo('</div>'); // Ukončuje portfóliovú položku
+        }
+
+        echo('</div>'); // Ukončuje riadok
+    }
+}
 function redirect_homepage(){
     header("Location: templates/home.php");
     die("Nepodarilo sa nájsť Domovskú stránku");
