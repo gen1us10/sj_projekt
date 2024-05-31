@@ -130,6 +130,14 @@ function generate_about(int $n_rows, int $n_cols){
         echo('</div>'); // Ukončuje riadok
     }
 }
+function generate_question(array $qna){
+    foreach($qna as $question=>$answer){
+        echo('<div class="accordion">');
+        echo('<div class="question">'.$question.'</div>');
+        echo('<div class="answer">'.$answer.'</div>');
+        echo('</div>');
+    }
+}
 function redirect_homepage(){
     header("Location: templates/home.php");
     die("Nepodarilo sa nájsť Domovskú stránku");
