@@ -121,7 +121,7 @@ function generate_about(int $n_rows, int $n_cols){
         // Pre každý stĺpec v aktuálnom riadku
         for($j = 0; $j < $n_cols; $j++){
             // Vytvára HTML element pre portfóliovú položku s identifikátorom a textom
-            echo('<div class="col-'.$col_class.' imggalr text-white text-center" id="about-'.$n_about.'">');
+            echo('<div class="col-'.$col_class.' photo gallery text-white text-center" id="gallery-'.$n_about.'">');
             echo('Web stránka '.$n_about); // Text portfóliovej položky
             $n_about++; // Inkrementuje poradové číslo portfólia
             echo('</div>'); // Ukončuje portfóliovú položku

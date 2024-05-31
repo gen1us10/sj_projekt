@@ -1,9 +1,9 @@
 <?php
     include_once('partials/header.php');
 ?>
-    <main class="gallery">
+    <main>
         
-        <section class="imggalr">
+        <section class="container">
         <?php
         $about_object = new About();
         $about = $about_object->select();
@@ -14,7 +14,7 @@
                 echo '<div class="row">';
             }
 
-            echo '<div class="col-25 box  text-white text-center" style="background-image: url(\''.$about[$i]->image.'\');">';
+            echo '<div class="col-25 gallery text-white text-center" style="background-image: url(\''.$about[$i]->image.'\');">';
             echo '<a href="">'.$about[$i]->name.'</a>';
             echo '</div>';
 
