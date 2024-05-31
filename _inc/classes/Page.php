@@ -20,7 +20,7 @@
                 case 'home':
                     echo '<link rel="stylesheet" href="../assets/css/slider.css">';
                     break;
-                case 'contact':
+                case 'kontakt':
                     echo '<link rel="stylesheet" href="../assets/css/contact.css">';
                     echo '<link rel="stylesheet" href="../assets/css/back.css">';
                     break;

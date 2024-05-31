@@ -74,8 +74,12 @@
     .hamburger{
         display: none;
     }
-    
-    
+    .row .col-100{
+        width:100%;
+    }
+    .text-center{
+        text-align:center;
+    }
     .container{
         padding:3% 10% 3% 10%;
     }

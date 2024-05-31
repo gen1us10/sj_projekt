@@ -28,7 +28,7 @@
           <?php
             $pages = array('Home'=>'home.php',
             'About us'=>'about.php',
-            'Contact '=>'contact.php',
+            'Contact '=>'kontakt.php',
             'Question'=>'question.php'  
                 );
             //echo(generate_menu($pages));

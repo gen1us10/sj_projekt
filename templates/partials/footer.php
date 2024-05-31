@@ -6,7 +6,7 @@
                     <?php
                         $pages = array('Home'=>'home.php',
                         'About us'=>'about.php',
-                        'Contact us'=>'contact.php',
+                        'Contact us'=>'kontakt.php',
                         'Question'=>'question.php'  
                         );
                         //echo(generate_menu($pages));
