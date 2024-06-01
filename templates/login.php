@@ -17,6 +17,8 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
                     <br>
                     <input type="submit" value="Odoslať" name="user_login">
                 </form>
+                </div>
+                </div>
                 
                 <?php
                     if(isset($_POST['user_login'])){
@@ -36,6 +38,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
 
                     }
                 ?>
+                </section>
     
 <?php
     include_once('partials/footer.php')

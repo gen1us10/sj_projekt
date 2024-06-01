@@ -1,17 +1,16 @@
 /*gallery*/
 .gallery{
     height:350px;
+    margin: 10px;
     background-size:cover;
-    display:flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 10px;
+    box-sizing: border-box;
     background-blend-mode: darken;
   }
   .gallery:hover{
     background-color: rgba(255,255,255,0.5);
     background-blend-mode: lighten;
   }
-  .row .col-25{
-    width:25%;
+  .row .col-33{
+    width: calc(33% - 20px);
 }

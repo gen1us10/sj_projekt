@@ -3,6 +3,7 @@
             <div class="row">
                 <div class="footer-col">
                     <h4>company</h4>
+                    <ul>
                     <?php
                         $pages = array('Home'=>'home.php',
                         'About us'=>'about.php',
@@ -13,6 +14,7 @@
                         $menu_object = new Menu($pages);
                         echo($menu_object->generate_menu());
                     ?>
+                    </ul>
                 </div>
                 <div class="footer-col">
                     <h4>get help</h4>
